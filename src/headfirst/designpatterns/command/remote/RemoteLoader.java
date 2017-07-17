@@ -10,6 +10,7 @@ public class RemoteLoader {
 		CeilingFan ceilingFan= new CeilingFan("Living Room");
 		GarageDoor garageDoor = new GarageDoor("");
 		Stereo stereo = new Stereo("Living Room");
+		AC ac = new AC("bedroom");
   
 		LightOnCommand livingRoomLightOn = 
 				new LightOnCommand(livingRoomLight);
@@ -34,11 +35,16 @@ public class RemoteLoader {
 				new StereoOnWithCDCommand(stereo);
 		StereoOffCommand  stereoOff =
 				new StereoOffCommand(stereo);
+		
+		ACOnCommand acOnCommand = new ACOnCommand(ac);
+		ACOffCommand acOffCommand = new ACOffCommand(ac);
  
 		remoteControl.setCommand(0, livingRoomLightOn, livingRoomLightOff);
 		remoteControl.setCommand(1, kitchenLightOn, kitchenLightOff);
 		remoteControl.setCommand(2, ceilingFanOn, ceilingFanOff);
 		remoteControl.setCommand(3, stereoOnWithCD, stereoOff);
+		remoteControl.setCommand(4, acOnCommand, acOffCommand);
+		remoteControl.setCommand(5, garageDoorUp, garageDoorDown);
   
 		System.out.println(remoteControl);
  
@@ -50,5 +56,10 @@ public class RemoteLoader {
 		remoteControl.offButtonWasPushed(2);
 		remoteControl.onButtonWasPushed(3);
 		remoteControl.offButtonWasPushed(3);
+		remoteControl.onButtonWasPushed(4);
+		remoteControl.offButtonWasPushed(4);
+
+		remoteControl.onButtonWasPushed(5);
+		remoteControl.offButtonWasPushed(5);
 	}
 }

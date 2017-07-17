@@ -14,6 +14,7 @@ public class MenuTestDrive {
 		
 		// With iterators
 		waitress.printMenu();
+		waitress.printVegetarianMenu();
 		
 	}
 	

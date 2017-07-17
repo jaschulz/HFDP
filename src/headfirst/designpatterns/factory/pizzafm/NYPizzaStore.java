@@ -11,6 +11,8 @@ public class NYPizzaStore extends PizzaStore {
 			return new NYStyleClamPizza();
 		} else if (item.equals("pepperoni")) {
 			return new NYStylePepperoniPizza();
+		} else if (item.equals("Multiple")) {
+			return new MultiplePizzas();
 		} else return null;
 	}
 }

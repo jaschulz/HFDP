@@ -2,6 +2,8 @@ package headfirst.designpatterns.factory.pizzafm;
 
 import java.util.ArrayList;
 
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
 public abstract class Pizza {
 	String name;
 	String dough;
@@ -43,6 +45,10 @@ public abstract class Pizza {
 			display.append(topping + "\n");
 		}
 		return display.toString();
+	}
+	
+	public void addPizza(Pizza p){
+		throw new NotImplementedException();
 	}
 }
 

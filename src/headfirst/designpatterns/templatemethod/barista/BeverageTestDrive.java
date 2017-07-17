@@ -5,6 +5,7 @@ public class BeverageTestDrive {
  
 		Tea tea = new Tea();
 		Coffee coffee = new Coffee();
+		Capuccino capuccino = new Capuccino();
  
 		System.out.println("\nMaking tea...");
 		tea.prepareRecipe();
@@ -12,7 +13,9 @@ public class BeverageTestDrive {
 		System.out.println("\nMaking coffee...");
 		coffee.prepareRecipe();
 
- 
+		System.out.println("\nMaking capuccino...");
+		capuccino.prepareRecipe();
+		
 		TeaWithHook teaHook = new TeaWithHook();
 		CoffeeWithHook coffeeHook = new CoffeeWithHook();
  

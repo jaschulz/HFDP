@@ -123,6 +123,13 @@ public class MenuTestDrive {
 			"Three almond or hazelnut biscotti cookies",
 			true,
 			0.89));
+		
+		MenuComponent merienda = new Menu("MERIENDA MENU","Merienda preestablecida");
+		
+		merienda.add(new MenuItem("Tea", "plain tea", true,0.99));
+		merienda.add(new MenuItem("Rogel cake", "A piece of Rogel Cake", true,2.99));
+		
+		coffeeMenu.add(merienda);
  
 		Waitress waitress = new Waitress(allMenus);
    
